@@ -1,0 +1,33 @@
+###
+GET http://localhost:9090/
+Accept: application/json
+### Listar lenguajes
+GET http://localhost:9090/lang
+Accept: application/json
+### Obtener un lenguaje con id
+GET http://localhost:9090/lang/1
+Accept: application/json
+
+### Crear lenguaje (autoincrementable)
+POST http://localhost:9090/lang
+Content-Type: application/json
+
+{
+    "name":"Scrol",
+    "last_update":"2006-02-15 05:02:19"
+}
+
+### Actualizar lenguaje con el id
+PUT http://localhost:9090/lang/1
+Content-Type: application/json
+
+{
+    "name":"Kriptoniano",
+    "last_update":"2006-02-15 05:02:19"
+}
+
+###Eliminar lenguaje (no permite eliminar registros que estan siendo usados como llave foranea)
+
+DELETE http://localhost:9090/lang/8
+Content-Type: application/json
+
